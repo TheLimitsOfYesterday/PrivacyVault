@@ -470,7 +470,8 @@ For questions, issues, or feedback regarding this application:
 # LICENSE:
 ==========
 
-This project is created for educational purposes as part of coursework requirements.
+This project is created for educational purposes as part of coursework requirements.  
+A MIT License is provided for this project in case any modifications are to be made by others.
 
 
 ---
