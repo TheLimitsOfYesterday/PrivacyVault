@@ -1,0 +1,120 @@
+Started GET "/" for ::1 at 2025-10-06 13:16:18 -0600
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='PrivacyVault'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='PrivacyVault'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PrivacyVault'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-8.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-8.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 929ms (Views: 104.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-07 23:31:11 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PrivacyVault'*/[0m
+Processing by EncryptionController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering encryption/index.html.erb within layouts/application
+  Rendered encryption/index.html.erb within layouts/application (Duration: 148.3ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 152.4ms | GC: 0.5ms)
+Completed 500 Internal Server Error in 2841ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csp_meta_tags' for an instance of #<Class:0x0000012c72e230c0>)
+Caused by: NameError (undefined local variable or method `csp_meta_tags' for an instance of #<Class:0x0000012c72e230c0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `csp_meta_tags' for an instance of #<Class:0x0000012c72e230c0>):
+    3: <head>
+    4:     <title>Privacy Vault</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tags %>
+    7:     <style>
+    8:         * {
+    9:             margin: 0;
+  
+app/views/encryption/index.html.erb:6
+
+Information for cause: NameError (undefined local variable or method `csp_meta_tags' for an instance of #<Class:0x0000012c72e230c0>):
+  
+app/views/encryption/index.html.erb:6
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-10-07 23:31:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2025-10-07 23:32:40 -0600
+Processing by EncryptionController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering encryption/index.html.erb within layouts/application
+  Rendered encryption/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 317.8ms | GC: 0.0ms)
+Completed 200 OK in 1346ms (Views: 326.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/encrypt" for 127.0.0.1 at 2025-10-07 23:35:03 -0600
+Processing by EncryptionController#encrypt as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x0000012c72894898 @tempfile=#<Tempfile:C:/Users/th3r3/AppData/Local/Temp/RackMultipart20251007-9348-f6z60n.pdf>, @content_type="application/pdf", @original_filename="3 - Homework 3 Instructions - Encryption.pdf", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"3 - Homework 3 Instructions - Encryption.pdf\"\r\nContent-Type: application/pdf\r\n">, "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 1001ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/encrypt" for 127.0.0.1 at 2025-10-07 23:35:57 -0600
+Processing by EncryptionController#encrypt as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x0000012c72f15550 @tempfile=#<Tempfile:C:/Users/th3r3/AppData/Local/Temp/RackMultipart20251007-9348-eoifm1.txt>, @content_type="text/plain", @original_filename="Dogs.txt", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"Dogs.txt\"\r\nContent-Type: text/plain\r\n">, "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 975ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/encrypt" for 127.0.0.1 at 2025-10-07 23:38:31 -0600
+Processing by EncryptionController#encrypt as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x0000012c72e447e8 @tempfile=#<Tempfile:C:/Users/th3r3/AppData/Local/Temp/RackMultipart20251007-9348-eqjebd.txt>, @content_type="text/plain", @original_filename="Dogs.txt", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"Dogs.txt\"\r\nContent-Type: text/plain\r\n">, "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 988ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/encrypt" for 127.0.0.1 at 2025-10-07 23:38:38 -0600
+Processing by EncryptionController#encrypt as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x0000012c727a6198 @tempfile=#<Tempfile:C:/Users/th3r3/AppData/Local/Temp/RackMultipart20251007-9348-6ows8v.txt>, @content_type="text/plain", @original_filename="Dogs.txt", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"Dogs.txt\"\r\nContent-Type: text/plain\r\n">, "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 961ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/encrypt" for 127.0.0.1 at 2025-10-07 23:39:07 -0600
+Processing by EncryptionController#encrypt as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x0000012c7061eb60 @tempfile=#<Tempfile:C:/Users/th3r3/AppData/Local/Temp/RackMultipart20251007-9348-s53t0c.txt>, @content_type="text/plain", @original_filename="Dogs.txt", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"Dogs.txt\"\r\nContent-Type: text/plain\r\n">, "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 1060ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/decrypt" for 127.0.0.1 at 2025-10-07 23:41:23 -0600
+Processing by EncryptionController#decrypt as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x0000012c72d44758 @tempfile=#<Tempfile:C:/Users/th3r3/AppData/Local/Temp/RackMultipart20251007-9348-rdxu9t.txt>, @content_type="text/plain", @original_filename="RandartImage.txt", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"RandartImage.txt\"\r\nContent-Type: text/plain\r\n">, "password"=>"[FILTERED]"}
+Completed 422 Unprocessable Content in 1004ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/encrypt" for 127.0.0.1 at 2025-10-07 23:42:36 -0600
+Processing by EncryptionController#encrypt as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x0000012c72c05bf8 @tempfile=#<Tempfile:C:/Users/th3r3/AppData/Local/Temp/RackMultipart20251007-9348-ks6d3e.txt>, @content_type="text/plain", @original_filename="RandartImage.txt", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"RandartImage.txt\"\r\nContent-Type: text/plain\r\n">, "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 978ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-07 23:46:55 -0600
+Processing by EncryptionController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering encryption/index.html.erb within layouts/application
+  Rendered encryption/index.html.erb within layouts/application (Duration: 173.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 177.1ms | GC: 0.0ms)
+Completed 200 OK in 464ms (Views: 180.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/encrypt" for 127.0.0.1 at 2025-10-07 23:47:08 -0600
+Processing by EncryptionController#encrypt as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x0000012c72c01c88 @tempfile=#<Tempfile:C:/Users/th3r3/AppData/Local/Temp/RackMultipart20251007-9348-59fu4.txt>, @content_type="text/plain", @original_filename="RandartImage.txt", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"RandartImage.txt\"\r\nContent-Type: text/plain\r\n">, "password"=>"[FILTERED]"}
+  Rendering text template
+  Rendered text template (Duration: 0.8ms | GC: 0.0ms)
+Sent data RandartImage.txt.enc (31.7ms)
+Completed 200 OK in 1079ms (Views: 31.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/decrypt" for 127.0.0.1 at 2025-10-07 23:47:54 -0600
+Processing by EncryptionController#decrypt as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x0000012c7171f6a8 @tempfile=#<Tempfile:C:/Users/th3r3/AppData/Local/Temp/RackMultipart20251007-9348-rjtci4.enc>, @content_type="application/octet-stream", @original_filename="RandartImage.txt.enc", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"RandartImage.txt.enc\"\r\nContent-Type: application/octet-stream\r\n">, "password"=>"[FILTERED]"}
+  Rendering text template
+  Rendered text template (Duration: 0.6ms | GC: 0.0ms)
+Sent data RandartImage.txt (1.8ms)
+Completed 200 OK in 1024ms (Views: 1.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
